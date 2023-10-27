@@ -11,5 +11,4 @@ int main()
         if (remainder == 1 or remainder == 2 or remainder == 5)
             cout << a << endl;
     }
-    return 0;
 }

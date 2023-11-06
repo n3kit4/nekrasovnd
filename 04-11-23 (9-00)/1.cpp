@@ -1,16 +1,16 @@
 #include <iostream>
+#include <math.h>
 using namespace std;
 
-int main()
-{
-	setlocale(LC_ALL, "Russian");
-	int n = 1, i = 1, k, sum = 0;
-	cout << "Введите N и k через пробел: ";
-	cin >> n >> k;
-	while (i <= n)
-	{
-		sum += i * k;
-		i++;
-	}
-	cout << sum;
+int main() {
+
+    double n = 2., k = 2., s;
+
+    cin >> n, k;
+
+    for(double i = 1.; i <= n; i++) {
+        s += pow(i, k);
+    }
+
+    cout << s;
 }

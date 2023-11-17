@@ -1,17 +1,18 @@
 #include <iostream>
 using namespace std;
 
-int min_common_divisor(int n, int m)
+int max_common_divisor(int n, int m)
 {
 	int min;
 	if (n > m)
 		min = m;
 	else
 		min = n;
-	for (int i = 2; i <= min; i++)
+	int mcd;
+	for (int i = 1; i <= min; i++)
 		if (n % i == 0 and m % i == 0)
-			return i;
-	return 1;
+			mcd = i;
+	return mcd;
 }
 
 int main()
@@ -20,5 +21,5 @@ int main()
 	cin >> N >> M;
 	N--;
 	M--;
-	cout << M + N - min_common_divisor(N, M);
+	cout << M + N - max_common_divisor(N, M);
 }

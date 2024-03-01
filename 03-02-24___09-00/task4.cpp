@@ -3,10 +3,11 @@ using namespace std;
 
 int main()
 {
-    float num = 7435421243;
-    for (int i = 0; i < 3; i++) {
-        num /= 1024; 
-        cout << num << "\t";
-        printf("%.5f\n", num);
+    int num, s = 0;
+    cin >> num;
+    while (num > 0) {
+        s += num % 10;
+        num /= 10;
     }
-}
+    cout << s;
+}    
